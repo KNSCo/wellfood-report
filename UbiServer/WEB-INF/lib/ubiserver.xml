@@ -20,10 +20,10 @@
 					type="direct"
 					vendor="Oracle"
 					driverClassName="oracle.jdbc.driver.OracleDriver"
-					url="jdbc:oracle:thin:@hanex-dev-rds-oracle.coherc69qjmr.ap-northeast-2.rds.amazonaws.com:1521:ORCL"
+					url="jdbc:oracle:thin:@175.197.189.41:1521:ORCL"
 					charset="KSC5601"
-					username="FMS_DEV_ADMIN"
-					password="hanex2323" />
+					username="AMEUGDEV"
+					password="EUGPASS$" />
 	</Resources>
 	<UbiServiceInfo urftype="normal" connectionTime="1800000" exectype="service">
 		<UbiService ip="localhost" port="16996" path=""/>
