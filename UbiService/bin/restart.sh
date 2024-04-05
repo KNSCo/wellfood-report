@@ -1,0 +1,40 @@
+USER=tomcat
+JAVA_DIR=/usr/local/jdk1.6.0
+UBISERVICE_DIR=/webapp/myapp/UbiService
+PROPERTY_DIR=$UBISERVICE_DIR
+FONT_DIR=$UBISERVICE_DIR/fonts/
+CLASSPATH=$UBISERVICE_DIR/lib/UbiServer.jar
+XMS=1024M
+XMX=2048M
+
+GREP_STR=$UBISERVICE_DIR/lib/UbiServer.jar
+
+
+if [ `id -un` == $USER ]; then
+
+	#For SunOS
+	#if [ `/usr/ucb/ps -auxwww | grep $GREP_STR | grep -v grep | awk '{print $2}'` ];then
+	#	kill -9 `/usr/ucb/ps -auxwww | grep $GREP_STR | grep -v grep | awk '{print $2}'`
+
+	#For UNIX HP-UX
+	#if [ `ps -efx | grep $GREP_STR | grep -v grep | awk '{print $2}'` ];then
+		kill -9 `ps -efx | grep $GREP_STR | grep -v grep | awk '{print $2}'`
+
+	if [ `ps -ef | grep $GREP_STR | grep -v grep | awk '{print $2}'` ];then
+		kill -9 `ps -ef | grep $GREP_STR | grep -v grep | awk '{print $2}'`
+		echo ""
+		echo ">>> UbiService has shutdown."
+		$JAVA_DIR/bin/java -Xms$XMS -Xmx$XMX -Dfile.encoding=UTF-8 -Djava.awt.headless=true -Dsun.java2d.fontpath=$FONT_DIR -classpath $CLASSPATH:. com.ubireport.service.UbiService4 $PROPERTY_DIR &
+		echo ">>> UbiService has started."
+		echo ""
+	else
+		echo ""
+		echo ">>> UbiService is not running."
+		echo ""
+	fi
+
+else
+	echo ""
+	echo ">>> User is not $USER!!! Please check user!!!"
+	echo ""
+fi
