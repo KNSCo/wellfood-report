@@ -16,14 +16,14 @@
 			 useDebug="true"
 			 info="true" />
 	<Resources>
-		<DataSource id="hanex"
+		<DataSource id="wellfood"
 					type="direct"
 					vendor="Oracle"
 					driverClassName="oracle.jdbc.driver.OracleDriver"
-					url="jdbc:oracle:thin:@175.197.189.41:1521:ORCL"
+					url="jdbc:oracle:thin:@kks4834-dev-rds-oracle-19.c180aacsgpfn.ap-northeast-2.rds.amazonaws.com:1521:ORCL"
 					charset="KSC5601"
-					username="AMEUGDEV"
-					password="EUGPASS$" />
+					username="WELLFOOD"
+					password="WellFoodLogis1@" />
 	</Resources>
 	<UbiServiceInfo urftype="normal" connectionTime="1800000" exectype="service">
 		<UbiService ip="localhost" port="16996" path=""/>
