@@ -23,13 +23,7 @@ GREP_STR=$UBISERVICE_DIR/lib/UbiServer.jar
 	#For UNIX HP-UX
 	#if [ `ps -efx | grep $GREP_STR | grep -v grep | awk '{print $2}'` ];then
 
-if [ `ps -ef | grep $GREP_STR | grep -v grep | awk '{print $2}'` ];then
-  echo ""
-  echo ">>> UbiService is running."
-  echo ""
-else
-  sudo nohup $JAVA_DIR/bin/java -Xms$XMS -Xmx$XMX -Dfile.encoding=UTF-8 -Djava.awt.headless=true -Dsun.java2d.fontpath=$FONT_DIR -classpath $CLASSPATH:. com.ubireport.service.UbiService4 $PROPERTY_DIR &
-  echo ""
-  echo ">>> UbiService has started."
-  echo ""
-fi
+sudo $JAVA_DIR/bin/java -Xms$XMS -Xmx$XMX -Dfile.encoding=UTF-8 -Djava.awt.headless=true -Dsun.java2d.fontpath=$FONT_DIR -classpath $CLASSPATH:. com.ubireport.service.UbiService4 $PROPERTY_DIR &
+echo ""
+echo ">>> UbiService has started."
+echo ""
