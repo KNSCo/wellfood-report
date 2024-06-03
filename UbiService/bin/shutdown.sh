@@ -10,7 +10,7 @@ GREP_STR=$UBISERVICE_DIR/lib/UbiServer.jar
 #	kill -9 `ps -efx | grep $GREP_STR | grep -v grep | awk '{print $2}'`
 
 if [ `ps -ef | grep $GREP_STR | grep -v grep | awk '{print $2}'` ];then
-	kill -9 `ps -ef | grep $GREP_STR | grep -v grep | awk '{print $2}'`
+	sudo kill -9 `ps -ef | grep $GREP_STR | grep -v grep | awk '{print $2}'`
 	echo ""
 	echo ">>> UbiService has shutdown."
 	echo ""
