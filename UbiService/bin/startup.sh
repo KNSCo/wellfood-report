@@ -1,4 +1,4 @@
-USER=tomcat
+USER=ubuntu
 JAVA_DIR=/home/ubuntu/wellfood-report/env/corretto-1.8
 UBISERVICE_DIR=/home/ubuntu/wellfood-report/UbiService
 PROPERTY_DIR=$UBISERVICE_DIR
