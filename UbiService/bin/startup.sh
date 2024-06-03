@@ -1,6 +1,6 @@
 USER=tomcat
-JAVA_DIR=/usr/local/jdk1.6.0
-UBISERVICE_DIR=/webapp/myapp/UbiService
+JAVA_DIR=/home/ubuntu/wellfood-report/env/corretto-1.8
+UBISERVICE_DIR=/home/ubuntu/wellfood-report/UbiService
 PROPERTY_DIR=$UBISERVICE_DIR
 FONT_DIR=$UBISERVICE_DIR/fonts/
 CLASSPATH=$UBISERVICE_DIR/lib/UbiServer.jar

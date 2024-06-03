@@ -1,4 +1,4 @@
-UBISERVICE_DIR=/webapp/myapp/UbiService
+UBISERVICE_DIR=/home/ubuntu/wellfood-report/UbiService
 GREP_STR=$UBISERVICE_DIR/lib/UbiServer.jar
 
 #For SunOS
