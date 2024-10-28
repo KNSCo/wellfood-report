@@ -7,7 +7,7 @@ if (typeof nexacro == 'undefined' || (typeof nexacro.Browser != 'undefined' && n
 //----------------------------------------------------------------------------------------------------
 // Context / Viewer 설정
 //----------------------------------------------------------------------------------------------------
-var UbiJS_App = "ubi-svc";
+var UbiJS_App = "UbiServer";
 var UbiJS_ViewerType = "UNICODE";				// UNICODE로 통일
 
 var UbiJS_PlguinInstallFile = "UbiViewer.exe";	// 플러그인 통합설치 파일명
