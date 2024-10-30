@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UbiService port="16996">
+	<!-- Executor urfThreads="6" exportThreads="3" pageThreads="3" /-->
+	<!-- TaskInfo property value : MINUTE,HOUR,DAY,WEEK,MONTH,YEAR -->
+	<TaskInfo taskResId="UBIHTML" taskPeriod="1" taskPeriodType="DAY" delPeriod="1" delPeriodType="DAY" />
+	<LogInfo logPath=""
+		backupStyle="date"
+		backupPattern="yyyy-MM-dd"
+		backupSize="180" />
+	<S3Info useS3="false"
+		bucketName=""
+		accessKey=""
+		secretKey="" />
+	<!-- For Redbc
+    <Redbc configXml=""
+         drmCopyProtectFileName=""
+         drmBarcodeType="HTML"
+         drmBarcodeCount="3" /> -->
+	<Resources> 
+		<Resource id="UBIHTML"
+			isLocalFile="true"
+			jrfDir="https://www.wellfoodlogis.com/ubi-svc/ubi4/work"
+			resultDir="/user/myapp/UbiService/results"
+			ubiserverUrl="https://www.wellfoodlogis.com/ubi-svc/UbiServer"
+			servletRoot="https://www.wellfoodlogis.com/ubi-svc"
+			fileUrl="https://www.wellfoodlogis.com/ubi-svc/ubi4/resource"
+			resource="true"
+			dataSource="wellfood"
+			useLog="true"
+			useDebug="true"
+			httpConnectionClassName=""
+			voiceyeClassName="" />
+	</Resources>
+</UbiService>
